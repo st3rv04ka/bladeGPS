@@ -16,7 +16,7 @@ fi
 export WGETRC=./.wgetrc
 
 if [ ! -e "$brdc_file_year" ]; then
-	wget --auth-no-challenge "https://cddis.nasa.gov/archive/gnss/data/daily/${year}/brdc/${brdc_file}.Z" -O ${brdc_file_year}.Z
+	wget --auth-no-challenge "https://cddis.nasa.gov/archive/gnss/data/daily/${year}/brdc/${brdc_file}.gz" -O ${brdc_file_year}.Z
 	if [ ! -e "${brdc_file_year}.Z" ]; then
 		echo "Can't download BRDC file"
 		exit
